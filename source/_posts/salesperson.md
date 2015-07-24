@@ -12,12 +12,12 @@ tags:
 一个移动端（hybrid app）混合应用，销售员通过域帐号认证登录，查看从 AP 系统推送过来的信息，一键拨打客户电话并且确认是否跟踪订单。
 
 ## 用到的技术
-| 移动端 | 服务端 | 开发工具 | 
-|:-------------------:|:-------------------:|:-------------------:| 
-| [Angular.js](http://angularjs.org/) ![Angular.js](https://avatars1.githubusercontent.com/u/139426?s=30) | [Node.js](http://nodejs.org/) <img src="http://nodejs.org/images/logo-light.svg" height="30" width="80" /> | [Gulp](http://gulpjs.com/) ![Gulp](https://avatars0.githubusercontent.com/u/6200624?s=30) &nbsp; [Bower](http://bower.io/) ![Bower](https://avatars3.githubusercontent.com/u/3709251?s=30) | 
-| [Ionic](http://ionicframework.com/) <img src="http://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" height="45" width="80" /> | [MongoDB](http://www.mongodb.org/) ![MongoDB](https://avatars3.githubusercontent.com/u/45120?v=2&s=30) | [NPM](https://www.npmjs.org/) ![NPM](https://avatars0.githubusercontent.com/u/6078720?s=30) &nbsp; [Ansible](https://www.ansible.com/) ![Ansible](https://avatars3.githubusercontent.com/u/1507452?v=2&s=30) | 
-| [Material Design](https://material.angularjs.org/) ![Angularjs](https://avatars1.githubusercontent.com/u/139426?s=30) | [Express.js](http://expressjs.com/)<img src="https://cldup.com/wpGXm1cWwB.png" height="40" width="145"> | [Vagrant](http://www.vagrantup.com/) <img src="https://www.vagrantup.com/images/logo_vagrant-81478652.png" height="40" width="145"> | 
-| [Cordova](https://cordova.apache.org/) <img src="https://cordova.apache.org/images/cordova_256.png" height="35" width="45" /> | [Redis](http://redis.io/) <img src="http://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png?v=2&s=30" height="35" width="125"> | &nbsp; | 
+| 移动端 | 服务端 |
+|:-------------------:|:-------------------:| 
+| [Angular.js](http://angularjs.org/) ![Angular.js](https://avatars1.githubusercontent.com/u/139426?s=30) | [Node.js](http://nodejs.org/) <img src="http://nodejs.org/images/logo-light.svg" height="30" width="80" /> |
+| [Ionic](http://ionicframework.com/) <img src="http://upload.wikimedia.org/wikipedia/commons/d/d1/Ionic_Logo.svg" height="45" width="80" /> | [MongoDB](http://www.mongodb.org/) ![MongoDB](https://avatars3.githubusercontent.com/u/45120?v=2&s=30) |
+| [Material Design](https://material.angularjs.org/) ![Angularjs](https://avatars1.githubusercontent.com/u/139426?s=30) | [Express.js](http://expressjs.com/)<img src="https://cldup.com/wpGXm1cWwB.png" height="40" width="145"> |
+| [Cordova](https://cordova.apache.org/) <img src="https://cordova.apache.org/images/cordova_256.png" height="35" width="45" />  &nbsp; [JPush](https://www.jpush.cn/)极光推送 | [Redis](http://redis.io/) <img src="http://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/467px-Redis_Logo.svg.png?v=2&s=30" height="35" width="125"> | 
 
 ## 应用架构
 一个端到端的应用架构
