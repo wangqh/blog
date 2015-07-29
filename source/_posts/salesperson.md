@@ -44,7 +44,7 @@ tags:
 2. **orders** - 存储销售员的订单信息, 下面是doc结构：
 {% codeblock Order %}
     {
-        "employee": {
+        "customer": {
             "id": "id43214",
             "name": "李文",
             "phone": "15210104324", //电话
@@ -77,7 +77,7 @@ tags:
 从ＡＰ推送过来的数据结构:
 {% codeblock AP 推送信息结构 %}
     {
-        "employee": {
+        "customer": {
             "id": "id43214",
             "name": "李文",
             "phone": "15210104324", //电话
