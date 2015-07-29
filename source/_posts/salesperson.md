@@ -24,7 +24,7 @@ tags:
 {% asset_img salesperson-diagram.png [应用架构] %}
 
 ### 数据库层
-选择MongoDB数据库,因为它易于存储JSON文档，且比较灵活。数据库有2个(collections)集合。
+选择MongoDB数据库,因为它易于存储JSON文档，且比较灵活。数据库有3个(collections)集合。
 
 1. **users** - 存储销售员基本信息, 下面是doc结构：
 {% codeblock User %}
@@ -41,8 +41,41 @@ tags:
     }
 {% endcodeblock %} 
     
-2. **orders** - 存储销售员接收到的订单信息, 下面是doc结构：
+2. **orders** - 存储销售员的订单信息, 下面是doc结构：
 {% codeblock Order %}
+    {
+        "employee": {
+            "id": "id43214",
+            "name": "李文",
+            "phone": "15210104324", //电话
+            "company": "中国海外建设" //公司名称
+        },
+        "salesperson": "wangqh-a", //销售员ID
+        "toTrack": false, //是否跟进
+        "hasPirate": true // 是否有盗版
+    }
+{% endcodeblock %} 
+
+3. **projects** - 存储订单中的工程信息, 下面是doc结构：
+{% codeblock Project %}
+    {
+        "name": "工程名称",
+        "hasPirate": true, // 是否有盗版
+        "keys": [
+            {
+                "keyNumber": "v423423",
+                "isPirate": true, // 是否为盗版
+                "notes": "", // 备注
+                "usedTime": 432142214324 // 使用时间
+            }
+        ],
+        "order": "orderId" // 与 order 关联
+    }
+{% endcodeblock %} 
+
+
+从ＡＰ推送过来的数据结构:
+{% codeblock AP 推送信息结构 %}
     {
         "employee": {
             "id": "id43214",
