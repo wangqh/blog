@@ -44,6 +44,17 @@ tags:
 2. **orders** - 存储销售员的订单信息, 下面是doc结构：
 {% codeblock Order %}
     {
+        "orderId": "Id224324234",
+        "salesperson": "wangqh-a", //销售员ID
+        "toTrack": false //是否跟进
+    }
+{% endcodeblock %} 
+
+
+从ＡＰ取过来的数据结构:
+{% codeblock AP 订单数据结构 %}
+    {
+        "_id": "orderId224324234",// 订单ID
         "customer": {
             "id": "id43214",
             "name": "李文",
@@ -51,47 +62,15 @@ tags:
             "company": "中国海外建设" //公司名称
         },
         "salesperson": "wangqh-a", //销售员ID
-        "toTrack": false, //是否跟进
-        "hasPirate": true // 是否有盗版
-    }
-{% endcodeblock %} 
-
-3. **projects** - 存储订单中的工程信息, 下面是doc结构：
-{% codeblock Project %}
-    {
-        "name": "工程名称",
-        "hasPirate": true, // 是否有盗版
-        "keys": [
-            {
-                "keyNumber": "v423423",
-                "isPirate": true, // 是否为盗版
-                "notes": "", // 备注
-                "usedTime": 432142214324 // 使用时间
-            }
-        ],
-        "order": "orderId" // 与 order 关联
-    }
-{% endcodeblock %} 
-
-
-从ＡＰ推送过来的数据结构:
-{% codeblock AP 推送信息结构 %}
-    {
-        "customer": {
-            "id": "id43214",
-            "name": "李文",
-            "phone": "15210104324", //电话
-            "company": "中国海外建设" //公司名称
-        },
-        "salesperson": "wangqh-a", //销售员ID
-        "toTrack": false, //是否跟进
         "hasPirate": true, // 是否有盗版
         "projects": [ 
             {
+                "_id": "id2343214",
                 "name": "工程名称",
                 "hasPirate": true, // 是否有盗版
-                "details": [
+                "keys": [
                     {
+                        "_id": "id443324",
                         "keyNumber": "v423423",
                         "isPirate": true, // 是否为盗版
                         "notes": "", // 备注
@@ -115,9 +94,13 @@ tags:
 **服务端 Controller**
 1. Sign In: **登录** 先在本地库中查询是否存在用户，存在即返回 Token；
     不存在就向公司域帐号请求认证，成功后向hr系统请求用户信息并保存到数据库。
-2. Sign Out: **退出** 删除当前 Token
-3. Orders: **订单** 接收从AP系统推送的订单，并用JPush推到前端。 另外，跟踪订单：把订单的跟踪状态置为 true
-4. Projects: **工程** 根据orderId获得工程列表，或用projectIda 获取 keys(工程内的加密锁列表)
+2. Sign Out: **退出** 删除当前 
+3. Order: **订单** 路由：
+    * orders/notify POST 接收从AP系统推送的销售员ID`{"salesperson": "wangqh-a"}`，并用JPush通知到前端。 
+    * orders GET 从AP系统获取订单数据 `GET ap.glodon.com/api/salesperson/:userId/orders?limit=10`。 
+    * orders/:id/projects GET 根据orderId获得工程列表`GET ap.glodon.com/api/salesperson/orders/:orderId/projects`
+    * orders/projects/:id/keys GET 用projectId 获取 keys(工程内的加密锁列表)`GET ap.glodon.com/api/salesperson/orders/projects/:projectId/keys`
+    * orders/:id/track PUT 跟踪订单：把订单的跟踪状态置为 true
 
 ### 客户端层
 下列是主要用到的技术
