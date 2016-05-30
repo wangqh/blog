@@ -8,9 +8,10 @@ subtitle: 码农，程序猿，JSer
 description:
 author: Chanh Wang
 language:
-- zh-CN
-- zh-TW
-- default
+- en
+- zh-Hans
+- zh-Hant-TW
+- zh-Hant-HK
 timezone:
 
 # URL
@@ -66,7 +67,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: pacman
+theme: yelee
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
