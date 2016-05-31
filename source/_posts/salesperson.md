@@ -1,6 +1,6 @@
 title: 销售员专用（hybrid app）混合应用
 date: 2015-07-14 16:25:12
-categories: 项目设计
+categories: 术业专攻
 tags: 
 - hybrid
 - nodejs
