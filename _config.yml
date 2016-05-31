@@ -7,11 +7,7 @@ title: Chanh's Blog
 subtitle: 码农，程序猿，JSer
 description:
 author: Chanh Wang
-language:
-- en
-- zh-Hans
-- zh-Hant-TW
-- zh-Hant-HK
+language: default
 timezone:
 
 # URL

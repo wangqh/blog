@@ -192,13 +192,14 @@ define([], function(){
             inputArea.oninput = function(){ HideTocArea() }
             inputArea.onkeydown = function(){ if(event.keyCode==13) return false}
 
-            resetSearch = function(){
+            window.resetSearch = function(){
                 $HideWhenSearch.css("visibility","initial");
                 $resultArea.html("");
                 document.querySelector("#search-form").reset();
                 $resetButton.hide();
                 $(".no-result").hide();
-            }
+            };
+            resetSearch();
 
             $resultArea.bind("DOMNodeRemoved DOMNodeInserted", function(e) {
                 if (!$(e.target).text()) {
