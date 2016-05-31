@@ -190,7 +190,7 @@ define([], function(){
                 $resetButton.show();
             }
             inputArea.oninput = function(){ HideTocArea() }
-            inputArea.onkeydown = function(){ if(event.keyCode==13) return false}
+            inputArea.onkeydown = function(event){ if(event.keyCode==13) return false}
 
             window.resetSearch = function(){
                 $HideWhenSearch.css("visibility","initial");
@@ -199,7 +199,6 @@ define([], function(){
                 $resetButton.hide();
                 $(".no-result").hide();
             };
-            resetSearch();
 
             $resultArea.bind("DOMNodeRemoved DOMNodeInserted", function(e) {
                 if (!$(e.target).text()) {
