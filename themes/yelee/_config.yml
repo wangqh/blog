@@ -221,7 +221,7 @@ baidu_site: V7UUFCTVUt
 google_site: Aa4-IQim38JhTl4Qbc7HfW3eSG3eIRHDgtPuqmRFM6U
 
 # Fill in Google Analytics tracking ID, #e.g. UA-XXXXX-X
-google_analytics: 
+google_analytics: UA-65160968-1
 
 # 百度统计 http://sitecenter.baidu.com/sc-web/
 # 查看代码，填入 //hm.baidu.com/hm.js? 之后的内容
