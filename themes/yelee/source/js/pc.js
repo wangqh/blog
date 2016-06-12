@@ -216,7 +216,7 @@ define([], function(){
             bind();
             Tips.init();
             miniArchives();
-            tooltip();
+            tooltip && tooltip();
             search();
         }
     }

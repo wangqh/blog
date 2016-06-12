@@ -210,4 +210,9 @@ require([], function (){
             }
         }
     })
+
+    // google analytics event track or social interaction
+    $("#switch-area .social a").on('click', function (e) {
+        ga('send', 'social', $(this).attr("title"), 'link', 'http://chanh.site');
+    })
 });
