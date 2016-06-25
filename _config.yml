@@ -7,15 +7,12 @@ title: Chanh's Blog
 subtitle: 码农，程序猿，JSer
 description:
 author: Chanh Wang
-language:
-- zh-CN
-- zh-TW
-- default
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://wangqh.github.io
+url: http://chanh.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -66,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: pacman
+theme: yelee
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
