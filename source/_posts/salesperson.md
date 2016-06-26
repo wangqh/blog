@@ -44,7 +44,7 @@ tags:
 2. **orders** - 存储销售员的订单信息, 下面是doc结构：
 {% codeblock Order %}
     {
-        "orderId": "Id224324234",
+        "_id": "id2323342",// 订单ID
         "salesperson": "wangqh-a", //销售员ID
         "toTrack": false //是否跟进
     }
