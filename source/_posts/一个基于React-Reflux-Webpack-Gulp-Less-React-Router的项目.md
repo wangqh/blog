@@ -52,19 +52,20 @@ tags:
 
 路由通常是一个单页应用的核心，用来控制不同视图间切换。监听 location 中 hash 的变化来实现不同 components 的展视。
 此应用的 URLs 与 components 对照：
-URL                               | Components
-----------------------------------|-----------
-`/`                               | `App`
-`/activity`                       | `App -> ActivityManage`
-`/activity/add`                   | `App -> ActivityManage -> ActivityAdd`
-`/activity/:activityId/edit`      | `App -> ActivityManage -> ActivityAdd`
-`/activity/:activityId/unit/add`  | `App -> UnitAdd`
-`/activity/unit/:unitId/edit`     | `App -> UnitAdd`
-`/activity/:id/detail`            | `App -> ActivityDetail`
-`/activity/unit/:id/detail`       | `App -> UnitDetail`
-`/event`                          | `App -> EventManage`
-`/accessdenied`                   | `App -> AccessDenied`
-`/*`                              | `App -> NotFound`
+
+| URL                               | Components |
+| --------------------------------- | ---------- |
+| `/`                               | `App` |
+| `/activity`                       | `App -> ActivityManage` |
+| `/activity/add`                   | `App -> ActivityManage -> ActivityAdd` |
+| `/activity/:activityId/edit`      | `App -> ActivityManage -> ActivityAdd` |
+| `/activity/:activityId/unit/add`  | `App -> UnitAdd` |
+| `/activity/unit/:unitId/edit`     | `App -> UnitAdd` |
+| `/activity/:id/detail`            | `App -> ActivityDetail` |
+| `/activity/unit/:id/detail`       | `App -> UnitDetail` |
+| `/event`                          | `App -> EventManage` |
+| `/accessdenied`                   | `App -> AccessDenied` |
+| `/*`                              | `App -> NotFound` |
 
 ### 代码片段
 ```js
