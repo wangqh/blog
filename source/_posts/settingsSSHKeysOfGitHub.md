@@ -13,7 +13,7 @@ categories: 自用笔记
 ```
 $ cd ~/.ssh #检查本机的ssh密钥
 ```
-> 如果提示：No such file or directory 说你机器上存在旧的 SSH key
+> 如果提示：No such file or directory 说明你机器上不存在旧的 SSH key
 
 ## 生成新的 SSH Key:
 首先用 ssh-keygen 生成一个密钥
@@ -52,7 +52,7 @@ $ cd ~/.ssh #检查本机的ssh密钥
 
 ## 添加 SSH Key 到 GitHub 账号
 在本机设置SSH Key之后，需要添加到GitHub上，以完成SSH连接接的设置。
-1. 打开本地 C:\Documents and Settings\your_user_directory\.ssh\id_rsa.pub 文件。此文件里面内容为刚才生成人密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
+1. 打开本地 C:\Documents and Settings\your_user_directory\.ssh\id_rsa.pub 文件。此文件里面内容为刚才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。
 2. 登陆github系统。点击右上角的 Settings ??> SSH and GPG keys ??> New SSH key
 3. 把你本地生成的密钥复制到里面（key文本框中），Title 可写中文标题，以区分其它绑定的机器， 点击 add SSH key 就 ok 了
 
