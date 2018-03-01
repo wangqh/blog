@@ -143,6 +143,8 @@ GoDaddy的NameServers有时会被墙，因此墙裂推荐国内的 [DNSPod](http
 {% codeblock %}
 hexo new "postName" #新建文章
 hexo new page "pageName" #新建页面
+hexo new draft "postName" #新建草稿
+hexo publish "postName" #发布草稿到文章
 hexo generate #生成静态页面至public目录
 hexo server #开启预览访问端口（默认端口4000，'ctrl + c'关闭server）
 hexo deploy #将.deploy目录部署到GitHub
